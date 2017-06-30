@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2293722B1F0688730041E4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293722A1F0688730041E4DF /* AppDelegate.swift */; };
-		2293722D1F0688730041E4DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293722C1F0688730041E4DF /* ViewController.swift */; };
+		2293722D1F0688730041E4DF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293722C1F0688730041E4DF /* DetailsViewController.swift */; };
 		229372301F0688730041E4DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2293722E1F0688730041E4DF /* Main.storyboard */; };
 		229372321F0688730041E4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229372311F0688730041E4DF /* Assets.xcassets */; };
 		229372351F0688730041E4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229372331F0688730041E4DF /* LaunchScreen.storyboard */; };
 		229372401F0688730041E4DF /* remind_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293723F1F0688730041E4DF /* remind_meTests.swift */; };
 		2293724B1F0688730041E4DF /* remind_meUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293724A1F0688730041E4DF /* remind_meUITests.swift */; };
+		22A386031F0699F700C11607 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A386021F0699F700C11607 /* WelcomeViewController.swift */; };
+		22A386051F069A5800C11607 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A386041F069A5800C11607 /* CustomCollectionViewController.swift */; };
+		22A386081F069CD900C11607 /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A386071F069CD900C11607 /* ReminderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		229372271F0688730041E4DF /* remind me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remind me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2293722A1F0688730041E4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2293722C1F0688730041E4DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2293722C1F0688730041E4DF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2293722F1F0688730041E4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		229372311F0688730041E4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229372341F0688730041E4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		229372461F0688730041E4DF /* remind meUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "remind meUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2293724A1F0688730041E4DF /* remind_meUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = remind_meUITests.swift; sourceTree = "<group>"; };
 		2293724C1F0688730041E4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A386021F0699F700C11607 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		22A386041F069A5800C11607 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
+		22A386071F069CD900C11607 /* ReminderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				2293722A1F0688730041E4DF /* AppDelegate.swift */,
-				2293722C1F0688730041E4DF /* ViewController.swift */,
+				22A386021F0699F700C11607 /* WelcomeViewController.swift */,
+				22A386041F069A5800C11607 /* CustomCollectionViewController.swift */,
+				2293722C1F0688730041E4DF /* DetailsViewController.swift */,
+				22A386061F069CA700C11607 /* Cells */,
 				2293722E1F0688730041E4DF /* Main.storyboard */,
 				229372311F0688730041E4DF /* Assets.xcassets */,
 				229372331F0688730041E4DF /* LaunchScreen.storyboard */,
@@ -123,6 +132,14 @@
 				2293724C1F0688730041E4DF /* Info.plist */,
 			);
 			path = "remind meUITests";
+			sourceTree = "<group>";
+		};
+		22A386061F069CA700C11607 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22A386071F069CD900C11607 /* ReminderCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2293722D1F0688730041E4DF /* ViewController.swift in Sources */,
+				22A386081F069CD900C11607 /* ReminderCell.swift in Sources */,
+				22A386031F0699F700C11607 /* WelcomeViewController.swift in Sources */,
+				22A386051F069A5800C11607 /* CustomCollectionViewController.swift in Sources */,
+				2293722D1F0688730041E4DF /* DetailsViewController.swift in Sources */,
 				2293722B1F0688730041E4DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +540,7 @@
 				229372511F0688730041E4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229372521F0688730041E4DF /* Build configuration list for PBXNativeTarget "remind meTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +549,7 @@
 				229372541F0688730041E4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229372551F0688730041E4DF /* Build configuration list for PBXNativeTarget "remind meUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +558,7 @@
 				229372571F0688730041E4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

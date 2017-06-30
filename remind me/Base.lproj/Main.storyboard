@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome Page-->
         <scene sceneID="T8Q-wi-z7m">
             <objects>
-                <viewController id="MLs-Pq-cZ0" sceneMemberID="viewController">
+                <viewController id="MLs-Pq-cZ0" customClass="WelcomeViewController" customModule="remind_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MK6-0b-gZA"/>
                         <viewControllerLayoutGuide type="bottom" id="BMg-va-AZJ"/>
@@ -33,36 +33,49 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78602153062820435" green="0.90844196081161499" blue="0.38545835018157959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hJo-Zm-KgA"/>
+                    <navigationItem key="navigationItem" title="Welcome Page" id="hJo-Zm-KgA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vb9-Pb-9Lw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610.39999999999998" y="106.59670164917542"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Custom Collection View Controller-->
         <scene sceneID="baK-x4-M8e">
             <objects>
-                <collectionViewController id="Eyp-0n-Hwe" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="IlI-Ud-Eov">
+                <collectionViewController id="Eyp-0n-Hwe" customClass="CustomCollectionViewController" customModule="remind_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IlI-Ud-Eov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AON-yz-Bc4">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="167" height="219"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dNr-B2-thP">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reminderCellID" id="dNr-B2-thP" customClass="ReminderCell" customModule="remind_me" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="167" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="219"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K45-ZI-UHa">
+                                            <rect key="frame" x="9" y="72" width="158" height="74"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="0.78602153062820435" green="0.90844196081161499" blue="0.38545835018157959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="reminderText" destination="K45-ZI-UHa" id="uRJ-Ft-Vas"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -73,36 +86,49 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJp-Y3-IVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="107"/>
+            <point key="canvasLocation" x="232.80000000000001" y="106.59670164917542"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="WKq-Ql-WUS">
+        <!--Details View Controller-->
+        <scene sceneID="rn7-9D-RvW">
             <objects>
-                <tableViewController id="rpE-Tr-qeJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="brL-lO-LRV">
+                <viewController storyboardIdentifier="DetailsVCID" id="UNb-UL-F6u" customClass="DetailsViewController" customModule="remind_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLC-FN-pbQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1LN-ci-lXL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vam-g7-A9t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3JF-74-9TJ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3JF-74-9TJ" id="Dz5-j7-1XW">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="rpE-Tr-qeJ" id="QAM-JM-f6B"/>
-                            <outlet property="delegate" destination="rpE-Tr-qeJ" id="TgZ-pq-nlG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qNR-Zm-fpV"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eQ8-Cx-DYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySI-CK-UVp">
+                                <rect key="frame" x="28" y="295" width="319" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iC-2k-OHz">
+                                <rect key="frame" x="16" y="28" width="70" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.84428926230000001" green="0.055205870910000003" blue="0.075215938770000004" alpha="0.3709867295" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.18039215689999999" green="0.68627450980000004" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeView:" destination="UNb-UL-F6u" eventType="touchUpInside" id="aoJ-ds-4hp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78602153062820435" green="0.90844196081161499" blue="0.38545835018157959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="reminderDetailsText" destination="ySI-CK-UVp" id="0AR-2C-bBl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgm-Zw-S15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="786"/>
+            <point key="canvasLocation" x="1005.6" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8R4-Ca-A3b">
