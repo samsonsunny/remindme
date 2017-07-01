@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221D59161F076DE300656E87 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D59151F076DE300656E87 /* CustomCollectionViewLayout.swift */; };
 		2293722B1F0688730041E4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293722A1F0688730041E4DF /* AppDelegate.swift */; };
 		2293722D1F0688730041E4DF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293722C1F0688730041E4DF /* DetailsViewController.swift */; };
 		229372301F0688730041E4DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2293722E1F0688730041E4DF /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221D59151F076DE300656E87 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
 		229372271F0688730041E4DF /* remind me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remind me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2293722A1F0688730041E4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2293722C1F0688730041E4DF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				22A386021F0699F700C11607 /* WelcomeViewController.swift */,
 				22A386041F069A5800C11607 /* CustomCollectionViewController.swift */,
 				2293722C1F0688730041E4DF /* DetailsViewController.swift */,
+				221D59151F076DE300656E87 /* CustomCollectionViewLayout.swift */,
 				22A386061F069CA700C11607 /* Cells */,
 				2293722E1F0688730041E4DF /* Main.storyboard */,
 				229372311F0688730041E4DF /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 				22A386031F0699F700C11607 /* WelcomeViewController.swift in Sources */,
 				22A386051F069A5800C11607 /* CustomCollectionViewController.swift in Sources */,
 				2293722D1F0688730041E4DF /* DetailsViewController.swift in Sources */,
+				221D59161F076DE300656E87 /* CustomCollectionViewLayout.swift in Sources */,
 				2293722B1F0688730041E4DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

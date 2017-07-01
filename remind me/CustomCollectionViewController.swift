@@ -12,6 +12,10 @@ class CustomCollectionViewController: UICollectionViewController {
 	
 	var reminders = ["hello", "hi", "how are you?", "What are you doing", "Thanks"]
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
+	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		
 		return reminders.count
